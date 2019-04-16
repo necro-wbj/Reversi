@@ -12,6 +12,7 @@ p2 = list()
 Record = True
 chessboard = np.zeros((8, 8))
 
+
 def start():
     global player, p1, p2, Record, chessboard
     Record = True
@@ -29,17 +30,16 @@ def start():
 
 
 def end(chessboard):
-    amount = np.count_nonzero(chessboard)
-    if amount < 64:
-        return True
-    else:
-        return False
+    iter = chessboard.flat
+    for i in iter:
+        if i == 0:
+            return True
+    return False
 
 
 def check(player):
-    global chessboard
     result = list()
-    canDown = np.array([[False]*8]*8)
+    canDown = np.zeros((8, 8), dtype=bool)
     for i in range(8):
         for j in range(8):
             if chessboard[i][j] == player:
@@ -50,35 +50,25 @@ def check(player):
     return canDown
 
 
-def opposite(chessboard):
-    train_chessboard = np.array(list(map(lambda x: x*-1, chessboard)))
-    return train_chessboard
-
-
 def dissplay(chessboard):
-    row = 0
     print(f'  | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ | ')
     print(f'{"":-<45}')
-    for i in chessboard:
-        result = list()
-        Record = True
-        for j in i:
-            if Record:
-                result.append(row)
-                Record = False
-                row += 1
-            if j == 0:
-                result.append('　')
-            elif j == -1:
-                result.append('○')
+    for i in range(8):
+        result = np.empty(8, dtype=str)
+        for j in range(8):
+            if chessboard[i][j] == 0:
+                result[j] = '　'
+            elif chessboard[i][j] == -1:
+                result[j] = '○'
             else:
-                result.append('●')
-        print(f' {result[0]}| {result[1]} | {result[2]} | {result[3]} | {result[4]} | {result[5]} | {result[6]} | {result[7]} | {result[8]} | ')
+                result[j] = '●'
+        print(f' {i}| {result[0]} | {result[1]} | {result[2]} | {result[3]} | {result[4]} | {result[5]} | {result[6]} | {result[7]} | ')
         print('{:-<45}'.format(''))
 
 
 manual = False  # 是否手動遊玩
 row = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F', 6: 'G', 7: 'H'}
+
 
 def gamming(manual=False, Probability=0):
     global memory, batch, input_data, expect_data, Record
@@ -87,7 +77,7 @@ def gamming(manual=False, Probability=0):
         cnaDown = check(player)
         if np.any(cnaDown.reshape(-1)):
             if player == -1:
-                predict_opt = tr.predict_opt(chessboard)
+                predict_opt = tr.predict_opt(chessboard * -1)
             else:
                 predict_opt = mtr.predict_opt(chessboard)
             end_game = False
