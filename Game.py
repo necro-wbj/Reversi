@@ -22,21 +22,30 @@ def start():
     chessboard[3][3] = 1
     chessboard[4][3] = -1
     chessboard[4][4] = 1
-    dissplay(chessboard)
-    print('..................................................')
+    # dissplay(chessboard)
+    # print('..................................................')
     return chessboard, player
 
 
-def check(player):
-    result = list()
+def check(chessboard,player):
     canDown = np.zeros((8, 8), dtype=bool)
+    down =False
+    
     for i in range(8):
         for j in range(8):
-            if chessboard[i][j] == player:
-                result.extend(scan.check(chessboard, i, j))
-    if len(result) > 0:
-        for x, y in result:
-            canDown[x][y] = True
+            if chessboard[i,j] == player:
+                check = scan.check(chessboard, i, j)
+                if np.any(check):
+                    if down:
+                        result = np.vstack((result, check))
+                    else:
+                        result = check
+                        down = True
+    if down:
+        # print(result.tolist())
+        for i,j in result:
+            if chessboard[i,j] != player:
+                canDown[i,j] = True
     return canDown
 
 
@@ -65,7 +74,7 @@ def gamming(manual=False, Probability=0):
     global memory, batch, input_data, expect_data, Record, p1, p2
     chessboard, player = start()
     while np.any(chessboard == 0):
-        cnaDown = check(player)
+        cnaDown = check(chessboard,player)
         if np.any(cnaDown.reshape(-1)):
             if player == -1:
                 predict_opt = tr.predict_opt(chessboard * -1)
@@ -97,12 +106,11 @@ def gamming(manual=False, Probability=0):
                 if len(predict_opt[cnaDown]) > 1 and random.randint(1, 100) <= Probability:
                     Record = False
                     max_value = np.random.choice(predict_opt[cnaDown])
-                chessboard[np.isinf(predict_opt)] = player
-            px, py = np.nonzero(np.isinf(predict_opt.reshape(8, 8)))
+                chessboard[max_filter] = player
+            px, py = np.nonzero(max_filter)
             px = px.astype(int)[0]
             py = py.astype(int)[0]
             chessboard = scan.update(chessboard, px, py, player)
-            # dissplay(chessboard)
             if Record:
                 if player == -1:
                     try:
@@ -124,7 +132,8 @@ def gamming(manual=False, Probability=0):
                         p2 = np.stack(
                             (chessboard.reshape(-1), predict_opt.reshape(-1))
                         ).reshape(1, 2, 64)
-            print(f'下的位置: {row[py]}{px}    隨機下: {not Record}')
+            # dissplay(chessboard)
+            # print(f'下的位置: {row[py]}{px}    隨機下: {not Record}')
         else:
             if end_game:
                 break

@@ -16,16 +16,23 @@ def update(chessboard, x, y, player):
 
 
 def check(chessboard, x, y):
-    result = list()
+    check = False
     for px, py in [[0, -1], [1, -1], [1, 0], [1, 1], [0, 1], [-1, 1], [-1, 0], [-1, -1]]:
-        i = 1
         try:
-            while chessboard[x+px*i][y+py*i] == chessboard[x][y] * -1:
+            i = 1
+            while chessboard[x+px*i, y+py*i] == chessboard[x, y] * -1:
                 i += 1
-            nx = x+px*i
-            ny = y+py*i
-            if i > 1 and nx >= 0 and ny >= 0 and chessboard[nx][ny] == 0:
-                result.append([nx, ny])
+            if i > 1:
+                nx = x+px*i
+                ny = y+py*i
+                if chessboard[x+px*i, y+py*i] == 0:
+                    if check:
+                        result = np.vstack((result, np.array((nx, ny), ndmin=2)))
+                    else:
+                        result = np.array((nx, ny), ndmin=2)
+                        check = True
         except IndexError:
             pass
-    return result
+    if check:
+        return result
+    return
