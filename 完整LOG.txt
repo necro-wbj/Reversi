@@ -1,0 +1,256 @@
+ * Serving Flask app "Game_online.py"
+ * Environment: development
+ * Debug mode: on
+初始化:
+WARNING:tensorflow:From C:\Users\Necro\AppData\Local\Programs\Python\Python36\lib\site-pac
+kages\tensorflow\python\ops\resource_variable_ops.py:435: colocate_with (from tensorflow.p
+ython.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+2019-04-30 09:12:36.227721: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU
+supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-04-30 09:12:36.465970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found
+ device 0 with properties:
+name: GeForce GTX 1070 major: 6 minor: 1 memoryClockRate(GHz): 1.873
+pciBusID: 0000:01:00.0
+totalMemory: 8.00GiB freeMemory: 6.64GiB
+2019-04-30 09:12:36.482423: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Addin
+g visible gpu devices: 0
+2019-04-30 09:12:37.077955: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device
+ interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 09:12:37.085234: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+
+2019-04-30 09:12:37.088526: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:
+N
+2019-04-30 09:12:37.092204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Creat
+ed TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6389 MB memory) ->
+ physical GPU (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0, compute capabi
+lity: 6.1)
+讀取已保存的主要網路模型...
+  | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ |
+---------------------------------------------
+ 0| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 1| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 2| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 3| 　 | 　 | 　 | ● | ○ | 　 | 　 | 　 |
+---------------------------------------------
+ 4| 　 | 　 | 　 | ○ | ● | 　 | 　 | 　 |
+---------------------------------------------
+ 5| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 6| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 7| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+2019-04-30 09:12:38.941493: I tensorflow/stream_executor/dso_loader.cc:152] successfully o
+pened CUDA library cublas64_100.dll locally
+[[ 5.8064965e-05  8.4920274e-04 -1.4930849e-04 -8.9838612e-04
+   3.8062269e-04 -7.6932239e-04  7.4101915e-04  6.2695576e-04]
+ [ 1.0756041e-04  1.4265187e-04  8.9614902e-04 -8.8105022e-05
+  -8.1192527e-04 -1.4458301e-04  3.2472977e-04  4.0373587e-04]
+ [ 9.4986020e-04 -7.1508565e-04 -8.0964458e-04 -6.5630872e-04
+  -1.4577875e-01 -3.9586361e-04  4.6591449e-04  3.8475551e-05]
+ [-1.0442655e-03 -1.2281538e-03 -1.1241450e-03 -2.4353292e-04
+   1.0218128e-03  4.2137577e-05  8.9970639e-04  8.3186670e-04]
+ [-1.7862783e-04 -9.4410992e-04  8.2493044e-04  1.2261171e-03
+   1.1562258e-03 -8.4140144e-02  8.0551021e-04 -3.5332754e-04]
+ [ 1.1797396e-04 -2.6688888e-04 -1.9336496e-05 -9.7339670e-04
+  -1.3451406e-03 -9.3942782e-04  2.1929412e-04 -2.1926560e-06]
+ [-3.7084523e-04 -6.8030035e-04  6.3134346e-04  2.7799510e-04
+   5.9486431e-04  2.0864495e-04 -7.7655027e-04 -9.7057340e-04]
+ [ 9.4011513e-04 -3.0187587e-04 -8.8354707e-04 -5.0123769e-04
+  -6.7255856e-04 -3.6241725e-06  2.9338169e-04  4.0478088e-04]]
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+  | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ |
+---------------------------------------------
+ 0| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 1| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 2| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 3| 　 | 　 | 　 | ● | ○ | 　 | 　 | 　 |
+---------------------------------------------
+ 4| 　 | 　 | 　 | ○ | ● | 　 | 　 | 　 |
+---------------------------------------------
+ 5| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 6| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 7| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+42.77.85.94 - - [30/Apr/2019 09:12:49] "[37mGET /start HTTP/1.1[0m" 200 -
+  | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ |
+---------------------------------------------
+ 0| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 1| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 2| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 3| 　 | 　 | 　 | ● | ○ | 　 | 　 | 　 |
+---------------------------------------------
+ 4| 　 | 　 | 　 | ○ | ● | 　 | 　 | 　 |
+---------------------------------------------
+ 5| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 6| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 7| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+42.77.85.94 - - [30/Apr/2019 09:12:49] "[37mGET /start HTTP/1.1[0m" 200 -
+[ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  1. -1.  0.  0.  0.  0.  0.  0. -1.
+  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+[[ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1. -1.  0.  0.  0.]
+ [ 0.  0.  0. -1.  1.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]]
+2019-04-30 09:12:51.995365: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Addin
+g visible gpu devices: 0
+2019-04-30 09:12:52.001255: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device
+ interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 09:12:52.007377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+
+2019-04-30 09:12:52.011515: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:
+N
+2019-04-30 09:12:52.024645: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Creat
+ed TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6389 MB memory) ->
+ physical GPU (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0, compute capabi
+lity: 6.1)
+錯誤!!!
+Tensor dense_input:0, specified in either feed_devices or fetch_devices was not found in t
+he Graph
+重新讀取....
+2019-04-30 09:12:54.383176: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Addin
+g visible gpu devices: 0
+2019-04-30 09:12:54.389597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device
+ interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 09:12:54.395997: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+
+2019-04-30 09:12:54.400071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:
+N
+2019-04-30 09:12:54.404486: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Creat
+ed TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6389 MB memory) ->
+ physical GPU (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0, compute capabi
+lity: 6.1)
+[ 0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  1. -1.  0.  0.  0.  0.  0.  0. -1.
+  1.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.
+  0.  0.  0.  0.  0.  0.  0.  0.  0.  0.]
+[[ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  1. -1.  0.  0.  0.]
+ [ 0.  0.  0. -1.  1.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]
+ [ 0.  0.  0.  0.  0.  0.  0.  0.]]
+2019-04-30 09:12:54.631301: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Addin
+g visible gpu devices: 0
+2019-04-30 09:12:54.640471: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device
+ interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 09:12:54.651216: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+
+2019-04-30 09:12:54.663535: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:
+N
+2019-04-30 09:12:54.671172: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Creat
+ed TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6389 MB memory) ->
+ physical GPU (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0, compute capabi
+lity: 6.1)
+錯誤!!!
+Tensor dense_input:0, specified in either feed_devices or fetch_devices was not found in t
+he Graph
+重新讀取....
+讀取已保存的主要網路模型...
+Exception ignored in: <bound method BaseSession._Callable.__del__ of <tensorflow.python.cl
+ient.session.BaseSession._Callable object at 0x000002AD5AABF160>>
+Traceback (most recent call last):
+  File "C:\Users\Necro\AppData\Local\Programs\Python\Python36\lib\site-packages\tensorflow
+\python\client\session.py", line 1455, in __del__
+    self._session._session, self._handle, status)
+  File "C:\Users\Necro\AppData\Local\Programs\Python\Python36\lib\site-packages\tensorflow
+\python\framework\errors_impl.py", line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.InvalidArgumentError: No such callable handle: 293
+6586359776
+  | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ |
+---------------------------------------------
+ 0| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 1| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 2| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 3| 　 | 　 | ○ | ○ | ○ | 　 | 　 | 　 |
+---------------------------------------------
+ 4| 　 | 　 | ● | ● | ● | 　 | 　 | 　 |
+---------------------------------------------
+ 5| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 6| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 7| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+42.77.85.94 - - [30/Apr/2019 09:12:56] "[37mGET /C3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0,0,0,0,0,0,0,0,1,-1,0,0,0,0,0,0,-1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0, HTTP/1.1[0m" 200 -
+2019-04-30 09:12:57.270753: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Addin
+g visible gpu devices: 0
+2019-04-30 09:12:57.277620: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device
+ interconnect StreamExecutor with strength 1 edge matrix:
+2019-04-30 09:12:57.293262: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0
+
+2019-04-30 09:12:57.301451: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:
+N
+2019-04-30 09:12:57.306662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Creat
+ed TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 6389 MB memory) ->
+ physical GPU (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0, compute capabi
+lity: 6.1)
+讀取已保存的主要網路模型...
+Exception ignored in: <bound method BaseSession._Callable.__del__ of <tensorflow.python.cl
+ient.session.BaseSession._Callable object at 0x000002AD6669CA58>>
+Traceback (most recent call last):
+  File "C:\Users\Necro\AppData\Local\Programs\Python\Python36\lib\site-packages\tensorflow
+\python\client\session.py", line 1455, in __del__
+    self._session._session, self._handle, status)
+  File "C:\Users\Necro\AppData\Local\Programs\Python\Python36\lib\site-packages\tensorflow
+\python\framework\errors_impl.py", line 528, in __exit__
+    c_api.TF_GetCode(self.status.status))
+tensorflow.python.framework.errors_impl.InvalidArgumentError: No such callable handle: 294
+3727954224
+  | Ａ | Ｂ | Ｃ | Ｄ | Ｅ | Ｆ | Ｇ | Ｈ |
+---------------------------------------------
+ 0| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 1| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 2| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 3| 　 | 　 | ○ | ○ | ○ | 　 | 　 | 　 |
+---------------------------------------------
+ 4| 　 | 　 | ● | ● | ● | 　 | 　 | 　 |
+---------------------------------------------
+ 5| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 6| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+ 7| 　 | 　 | 　 | 　 | 　 | 　 | 　 | 　 |
+---------------------------------------------
+42.77.85.94 - - [30/Apr/2019 09:12:58] "[37mGET /C3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0,0,0,0,0,0,0,0,1,-1,0,0,0,0,0,0,-1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+,0, HTTP/1.1[0m" 200 -
